@@ -10,4 +10,4 @@ Terraform root for the booking application.
 - one ALB listener rule for `/booking/*`
 - one CloudWatch log group
 
-Replace the placeholder module source in [`environments/dev/main.tf`](/Users/harish/Documents/Playground/booking-infra/environments/dev/main.tf) with your GitHub org and release tag.
+Replace the placeholder module source in [`environments/dev/main.tf`](/Users/harish/Documents/northstar/booking-infra/environments/dev/main.tf) with your GitHub org and release tag.
