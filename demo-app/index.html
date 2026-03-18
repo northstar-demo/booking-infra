@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NorthStar Airlines | Book Your Journey</title>
+  <style>
+    :root {
+      --navy: #0a2540;
+      --blue: #0f6cbd;
+      --sky: #dff3ff;
+      --gold: #f0b429;
+      --ink: #122033;
+      --card: #ffffff;
+      --muted: #5b6b80;
+      --border: #d8e4f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f4fbff 0%, #eef4fa 100%);
+    }
+    header {
+      background: linear-gradient(135deg, var(--navy), #103a63 55%, #0d5f93 100%);
+      color: white;
+      padding: 24px 24px 88px;
+    }
+    nav, .hero, main {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 52px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: 600;
+    }
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      gap: 24px;
+      align-items: center;
+    }
+    .eyebrow {
+      color: #9cd5ff;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: clamp(2.5rem, 4vw, 4.5rem);
+      line-height: 1.05;
+      margin: 10px 0 16px;
+    }
+    .hero p {
+      font-size: 1.08rem;
+      color: #d7ebff;
+      max-width: 560px;
+    }
+    .hero-actions a {
+      display: inline-block;
+      margin-right: 12px;
+      margin-top: 10px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .primary {
+      background: var(--gold);
+      color: #162231;
+    }
+    .secondary {
+      border: 1px solid rgba(255,255,255,0.35);
+      color: white;
+    }
+    .booking-card {
+      background: rgba(255,255,255,0.98);
+      color: var(--ink);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 24px 60px rgba(4, 26, 44, 0.18);
+    }
+    .booking-card h2 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1.25rem;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    input, select, button {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      font: inherit;
+    }
+    button {
+      margin-top: 14px;
+      background: var(--blue);
+      color: white;
+      font-weight: 700;
+      border: none;
+    }
+    main {
+      margin-top: -54px;
+      padding: 0 24px 48px;
+    }
+    .section {
+      margin-bottom: 24px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 14px 32px rgba(14, 32, 53, 0.08);
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    .route-links a {
+      display: inline-block;
+      margin-right: 12px;
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      padding: 24px;
+    }
+    @media (max-width: 900px) {
+      .hero-grid, .cards, .form-grid {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        display: block;
+      }
+      nav div:last-child {
+        margin-top: 14px;
+      }
+      nav a {
+        margin-left: 0;
+        margin-right: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="brand">NorthStar Airlines</div>
+      <div>
+        <a href="/">Home</a>
+        <a href="/booking/">Book</a>
+        <a href="/flight/">Manage Flight</a>
+        <a href="/payment/">Payment</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Middle East Hub. Global Reach.</div>
+          <h1>Fly 180 destinations with a modern NorthStar experience.</h1>
+          <p>NorthStar Airlines is your interview-ready digital airline storefront: one public website, three independently deployed services, and shared cloud foundations built with reusable Terraform modules.</p>
+          <div class="hero-actions">
+            <a class="primary" href="/booking/">Book a Flight</a>
+            <a class="secondary" href="/flight/">Manage Trip</a>
+          </div>
+        </div>
+        <div class="booking-card">
+          <h2>Quick Search</h2>
+          <div class="form-grid">
+            <div>
+              <label for="from">From</label>
+              <input id="from" value="Dubai (DXB)">
+            </div>
+            <div>
+              <label for="to">To</label>
+              <input id="to" value="London (LHR)">
+            </div>
+            <div>
+              <label for="depart">Departure</label>
+              <input id="depart" type="date" value="2026-03-23">
+            </div>
+            <div>
+              <label for="return">Return</label>
+              <input id="return" type="date" value="2026-03-29">
+            </div>
+            <div>
+              <label for="travellers">Passengers</label>
+              <select id="travellers">
+                <option>1 Adult</option>
+                <option>2 Adults</option>
+                <option>Family of 4</option>
+              </select>
+            </div>
+            <div>
+              <label for="cabin">Cabin</label>
+              <select id="cabin">
+                <option>Economy</option>
+                <option>Business</option>
+                <option>First</option>
+              </select>
+            </div>
+          </div>
+          <button type="button">Search Flights</button>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section class="section cards">
+      <article class="card">
+        <h3>Featured Destination</h3>
+        <p>Dubai to London with nightly departures, premium lounges, and fast connection support across the network.</p>
+      </article>
+      <article class="card">
+        <h3>Booking Workflow</h3>
+        <p>Showcase the public website, then pivot into the separate flight and payment services through ALB path-based routing.</p>
+      </article>
+      <article class="card">
+        <h3>Cloud Story</h3>
+        <p>Shared ECS and ALB foundations, separate Terraform repos, reusable modules, and room for enterprise controls later.</p>
+      </article>
+    </section>
+    <section class="section card">
+      <h3>Demo Navigation</h3>
+      <p>Use these links during the interview to show the three app split behind one airline domain.</p>
+      <div class="route-links">
+        <a href="/booking/">Booking Service</a>
+        <a href="/flight/">Flight Management</a>
+        <a href="/payment/">Payment Service</a>
+        <a href="/booking/health">Booking Health</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    NorthStar Airlines demo website hosted on AWS ECS Fargate through reusable Terraform.
+  </footer>
+</body>
+</html>
